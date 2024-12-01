@@ -194,49 +194,4 @@ body, html {
             box-shadow: 0 0 15px rgba(0, 191, 255, 1), 0 0 30px rgba(0, 191, 255, 0.7);
             transform: scale(1.1); /* Легке збільшення при наведенні */
         }
-/* Для мобільних пристроїв */
-@media (max-width: 768px) {
-    .parallax-container {
-        height: 100vh;
-        overflow: hidden;
-    }
 
-    .parallax-layer {
-        transform: none; /* Відключення 3D-руху на дуже маленьких екранах, якщо потрібно */
-    }
-
-    .text-content {
-        font-size: 2rem; /* Зменшення розміру тексту */
-        padding: 10px;
-    }
-
-    .glowing-button {
-        font-size: 1rem; /* Менший розмір тексту на кнопці */
-        padding: 8px 16px;
-        border-radius: 10px; /* Менший радіус для кнопки */
-    }
-
-    .button-layer {
-        bottom: 10%; /* Кнопка трохи вище для мобільних */
-    }
-
-    .parallax-photo {
-        width: 90%; /* Зменшення розміру фото */
-    }
-}
-@media (max-width: 480px) {
-    .text-content {
-        font-size: 1.5rem;
-    }
-
-    .glowing-button {
-        font-size: 0.9rem;
-        padding: 6px 12px;
-    }
-}
-@media (max-width: 768px) {
-    .middle,
-    .foreground {
-        display: none; /* Приховані шари для спрощення на маленьких екранах */
-    }
-}

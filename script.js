@@ -39,29 +39,8 @@ document.addEventListener('mousemove', (e) => {
                 
                         layer.style.transform = `translate3d(${moveX}px, ${moveY}px, 0)`;
                     });
-                    function handleParallax(event) {
-                        const layers = document.querySelectorAll(".parallax-layer");
-                    
-                        layers.forEach((layer) => {
-                            const depth = layer.getAttribute("data-depth");
-                            const moveX = (event.pageX - window.innerWidth / 2) * depth * 0.01;
-                            const moveY = (event.pageY - window.innerHeight / 2) * depth * 0.01;
-                    
-                            layer.style.transform = `translate3d(${moveX}px, ${moveY}px, 0)`;
-                        });
-                    
-                        // Окремий рух для кнопки
-                        const buttonLayer = document.querySelector(".button-layer");
-                        if (buttonLayer) {
-                            const depth = buttonLayer.getAttribute("data-depth");
-                            const moveX = (event.pageX - window.innerWidth / 2) * depth * 0.02; // Більший ефект
-                            const moveY = (event.pageY - window.innerHeight / 2) * depth * 0.02;
-                    
-                            buttonLayer.style.transform = `translate3d(${moveX}px, ${moveY}px, 0)`;
-                        }
-                    }
-                    if (window.innerWidth > 768) { // Ефект працює тільки на екранах більше 768px
-                        handleParallax(event);
-                    }
-                });
                 }
+            }
+        }
+    });
+});
